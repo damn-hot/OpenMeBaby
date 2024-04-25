@@ -1,0 +1,58 @@
+localhost/joomla/administrator
+localhost/wordpress/wp-admin
+http://localhost/drupal/admin
+
+==========================================================
+{card title="Plug in creation for Joomla Content"} Content: Article {/card}
+{card} 
+// Content 
+{/card}
+==========================================================
+
+Drupal installation error
+PHP file: (ctrl+f to search for gd)
+1)There will be a semicolon before ";extension=gd",  remove it.
+2)This is optional to solve PHP OPcode caching. Paste it after the end of the last line
+[opcache]
+zend_extension=php_opcache.dll
+;Determines if Zend OPCache in enabled
+opcache.enable=1
+opcache.memory_consumption=128
+opcache.interned_strings_buffer=8
+opcache.max_accelerated_files=4000
+opcache.revalidate_freq=60
+opcache.fast_shutdown=1
+
+============================================================
+XAMPP error:
+
+phpMyAdmin file:
+/* Authentication type and info */
+$cfg['Servers'][$i]['auth_type'] = 'config';
+$cfg['Servers'][$i]['user'] = 'root';
+$cfg['Servers'][$i]['password'] = '';
+$cfg['Servers'][$i]['extension'] = 'mysqli';
+$cfg['Servers'][$i]['AllowNoPassword'] = true;
+$cfg['Servers'][$i]['Port'] = 7306;
+$cfg['Lang'] = '';
+
+/* Bind to the localhost ipv4 address and tcp */
+$cfg['Servers'][$i]['host'] = '127.0.0.1:7306';
+$cfg['Servers'][$i]['connect_type'] = 'tcp';
+
+my.ini file:
+port=7306 (change it in 2 places)
+===========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
