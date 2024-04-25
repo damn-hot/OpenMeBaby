@@ -1,8 +1,0 @@
-TYPE in windows search bar: gpedit.msc
-
-GO TO Computer Configuration > Administrative Templates > Windows Components > Bit Locker Drive Encryption.
-
-Enable this policy: Require additional authentication. 
-Then inside this policy enable this option: "Allow Bit Locker without a compatible TPM checkbox"
-
-Click ok. Finish
